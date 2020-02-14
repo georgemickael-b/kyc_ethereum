@@ -1,0 +1,1010 @@
+{
+  "contractName": "Types",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.9+commit.e560f70d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/HP/Documents/Fiddle/KYC_Eth/contracts/Types.sol\":\"Types\"},\"evmVersion\":\"homestead\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/HP/Documents/Fiddle/KYC_Eth/contracts/Types.sol\":{\"keccak256\":\"0xdec96c6a21b9aecf65149e3184ee854d5c16d028eda28eb49c21baee97c6537b\",\"urls\":[\"bzzr://ce2041f18caccee4a6f65b89110b10efc01b20195aa934952a70f4982689346e\",\"dweb:/ipfs/QmakUCKYjJSUNgPic4pkPFfGnj6jCG2q3PtUcTue3R3Lwh\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72305820cf2ae3e8b663cc248e7a011667ee706a3acc0f56bc002e44353694c51c9ead0c64736f6c63430005090032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72305820cf2ae3e8b663cc248e7a011667ee706a3acc0f56bc002e44353694c51c9ead0c64736f6c63430005090032",
+  "sourceMap": "27:807:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:807:7;;;;;;;",
+  "deployedSourceMap": "27:807:7:-;;;;;",
+  "source": "pragma solidity ^0.5.9;\r\n\r\ncontract Types{\r\n    /*\r\n    Struct for a customer\r\n    */\r\n    struct Customer {\r\n        string userName;   //unique\r\n        string data_hash;  //unique\r\n        uint8 upvotes;\r\n        address bank;\r\n        uint256 rating;   // Percentage\r\n        bytes32 password; // keccak256 will be used to hash password which will be always 32 bytes\r\n    }\r\n\r\n    /*\r\n    Struct for a Bank\r\n    */\r\n    struct Bank {\r\n        address ethAddress;  //unique\r\n        string bankName;\r\n        string regNumber;    //unique\r\n        uint256 KYC_count;\r\n        uint256 rating; //Percentage\r\n        uint8 upvotes;\r\n    }\r\n\r\n    /*\r\n    Struct for a KYC Request\r\n    */\r\n    struct KYCRequest {\r\n        string userName;\r\n        string data_hash;  //unique\r\n        address bank;\r\n        bool isAllowed;\r\n    }\r\n\r\n}\r\n",
+  "sourcePath": "C:\\Users\\HP\\Documents\\Fiddle\\KYC_Eth\\contracts\\Types.sol",
+  "ast": {
+    "absolutePath": "/C/Users/HP/Documents/Fiddle/KYC_Eth/contracts/Types.sol",
+    "exportedSymbols": {
+      "Types": [
+        1629
+      ]
+    },
+    "id": 1630,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1593,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1629,
+        "linearizedBaseContracts": [
+          1629
+        ],
+        "name": "Types",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Types.Customer",
+            "id": 1606,
+            "members": [
+              {
+                "constant": false,
+                "id": 1595,
+                "name": "userName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "118:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1594,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "118:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1597,
+                "name": "data_hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "155:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1596,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1599,
+                "name": "upvotes",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "192:13:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1598,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "192:5:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1601,
+                "name": "bank",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "216:12:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1600,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "216:7:7",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1603,
+                "name": "rating",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "239:14:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1602,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "239:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1605,
+                "name": "password",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "280:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1604,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "280:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Customer",
+            "nodeType": "StructDefinition",
+            "scope": 1629,
+            "src": "91:286:7",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Types.Bank",
+            "id": 1619,
+            "members": [
+              {
+                "constant": false,
+                "id": 1608,
+                "name": "ethAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "447:18:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1607,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "447:7:7",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1610,
+                "name": "bankName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "486:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1609,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "486:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1612,
+                "name": "regNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "512:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1611,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "512:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1614,
+                "name": "KYC_count",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "551:17:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1613,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "551:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1616,
+                "name": "rating",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "579:14:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1615,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "579:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1618,
+                "name": "upvotes",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "617:13:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1617,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "617:5:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Bank",
+            "nodeType": "StructDefinition",
+            "scope": 1629,
+            "src": "424:214:7",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Types.KYCRequest",
+            "id": 1628,
+            "members": [
+              {
+                "constant": false,
+                "id": 1621,
+                "name": "userName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "721:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1620,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "721:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1623,
+                "name": "data_hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "747:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1622,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "747:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1625,
+                "name": "bank",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "784:12:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1624,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "784:7:7",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1627,
+                "name": "isAllowed",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "807:14:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1626,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "807:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "KYCRequest",
+            "nodeType": "StructDefinition",
+            "scope": 1629,
+            "src": "692:137:7",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1630,
+        "src": "27:807:7"
+      }
+    ],
+    "src": "0:836:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/HP/Documents/Fiddle/KYC_Eth/contracts/Types.sol",
+    "exportedSymbols": {
+      "Types": [
+        1629
+      ]
+    },
+    "id": 1630,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1593,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1629,
+        "linearizedBaseContracts": [
+          1629
+        ],
+        "name": "Types",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Types.Customer",
+            "id": 1606,
+            "members": [
+              {
+                "constant": false,
+                "id": 1595,
+                "name": "userName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "118:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1594,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "118:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1597,
+                "name": "data_hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "155:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1596,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1599,
+                "name": "upvotes",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "192:13:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1598,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "192:5:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1601,
+                "name": "bank",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "216:12:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1600,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "216:7:7",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1603,
+                "name": "rating",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "239:14:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1602,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "239:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1605,
+                "name": "password",
+                "nodeType": "VariableDeclaration",
+                "scope": 1606,
+                "src": "280:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 1604,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "280:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Customer",
+            "nodeType": "StructDefinition",
+            "scope": 1629,
+            "src": "91:286:7",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Types.Bank",
+            "id": 1619,
+            "members": [
+              {
+                "constant": false,
+                "id": 1608,
+                "name": "ethAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "447:18:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1607,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "447:7:7",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1610,
+                "name": "bankName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "486:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1609,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "486:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1612,
+                "name": "regNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "512:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1611,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "512:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1614,
+                "name": "KYC_count",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "551:17:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1613,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "551:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1616,
+                "name": "rating",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "579:14:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1615,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "579:7:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1618,
+                "name": "upvotes",
+                "nodeType": "VariableDeclaration",
+                "scope": 1619,
+                "src": "617:13:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1617,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "617:5:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Bank",
+            "nodeType": "StructDefinition",
+            "scope": 1629,
+            "src": "424:214:7",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Types.KYCRequest",
+            "id": 1628,
+            "members": [
+              {
+                "constant": false,
+                "id": 1621,
+                "name": "userName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "721:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1620,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "721:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1623,
+                "name": "data_hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "747:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1622,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "747:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1625,
+                "name": "bank",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "784:12:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1624,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "784:7:7",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1627,
+                "name": "isAllowed",
+                "nodeType": "VariableDeclaration",
+                "scope": 1628,
+                "src": "807:14:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1626,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "807:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "KYCRequest",
+            "nodeType": "StructDefinition",
+            "scope": 1629,
+            "src": "692:137:7",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1630,
+        "src": "27:807:7"
+      }
+    ],
+    "src": "0:836:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.9+commit.e560f70d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-01-06T18:21:04.874Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
